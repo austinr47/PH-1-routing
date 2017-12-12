@@ -21,7 +21,7 @@ export default class People extends Component {
   render() {
     const people = this.state.people.map((e, i) => {
       return (
-        <Link to path={`/people/${e.id}`}>{e.name}</Link>
+        <Link to={`/people/${e.id}`}>{e.name}</Link>
       )
     })
     return (
