@@ -6,6 +6,7 @@ import People from './People/People';
 import FAQ from './About/FAQ/FAQ';
 import Company from './About/Company/Company';
 import Character from './Character/Character';
+import RouterRoutes from '../router';
 
 
 class App extends Component {
@@ -18,15 +19,7 @@ class App extends Component {
           <Link to='/about'>About</Link>
           <Link to='/people'>People</Link>
         </div>
-        <Route exact path='/' component={Home}/>
-        <Route path='/about' render={() => (
-          <About>
-            <Route path='/about/FAQ' component={FAQ}/>
-            <Route path='/about/company' component={Company}/>
-          </About>
-        )}/>
-          <Route path="/people/:id" component={Character}/>
-          <Route exact path="/people" component={People}/>
+        <RouterRoutes />
       </div>
     );
   }
